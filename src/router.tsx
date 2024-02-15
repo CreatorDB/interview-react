@@ -1,8 +1,8 @@
 import { createBrowserRouter, redirect } from 'react-router-dom';
 import { Layout } from './layout';
 import { Test1Page } from './routes/test-1/page';
-import { Test2Page } from './routes/test-2/test-2';
-import { Test3Page } from './routes/test-3/test-3';
+import { Test2Page } from './routes/test-2/page';
+import { Test3Page } from './routes/test-3/page';
 
 export const router = createBrowserRouter([
   {

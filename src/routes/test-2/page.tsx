@@ -28,15 +28,23 @@ export const Test2Page = () => {
   }, []);
 
   return (
-    <form className="flex flex-col gap-y-4" onSubmit={handleSubmit}>
-      {/* input */}
-      <div>
-        <input type="text" value={name} className="border border-gray-300 px-2 outline-none" onChange={handleChange} />
-      </div>
-      {/* submit button */}
-      <button type="submit" className="rounded-full border-blue-700 bg-blue-400 px-2 text-white">
-        Submit
-      </button>
-    </form>
+    <>
+      <h1 className="text-lg font-bold">Show me how to not make this component re-render</h1>
+      <form className="flex flex-col gap-y-4" onSubmit={handleSubmit}>
+        {/* input */}
+        <div>
+          <input
+            type="text"
+            value={name}
+            className="border border-gray-300 px-2 outline-none"
+            onChange={handleChange}
+          />
+        </div>
+        {/* submit button */}
+        <button type="submit" className="rounded-full border-blue-700 bg-blue-400 px-2 text-white">
+          Submit
+        </button>
+      </form>
+    </>
   );
 };

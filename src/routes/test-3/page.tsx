@@ -28,15 +28,18 @@ export const Test3Page = () => {
   }, []);
 
   return (
-    <div>
-      {/* intro */}
-      <p ref={introEl} className={[introElHeight > 72 ? 'line-clamp-3' : '', 'w-60'].join(' ')}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem magnam dolorem aliquid consectetur nemo
-        ipsam ex ab maxime blanditiis voluptatum officiis repudiandae praesentium atque doloremque, beatae excepturi
-        reprehenderit quisquam ratione! Officia voluptate ratione quidem ea dolores eos facere omnis molestias!
-      </p>
-      {/* show more button */}
-      {hasShowButton && <button onClick={handleClickShowMore}>Show more</button>}
-    </div>
+    <>
+      <h1 className="text-lg font-bold">There is something weird</h1>
+      <div>
+        {/* intro */}
+        <p ref={introEl} className={[introElHeight > 72 ? 'line-clamp-3' : '', 'w-60'].join(' ')}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem magnam dolorem aliquid consectetur nemo
+          ipsam ex ab maxime blanditiis voluptatum officiis repudiandae praesentium atque doloremque, beatae excepturi
+          reprehenderit quisquam ratione! Officia voluptate ratione quidem ea dolores eos facere omnis molestias!
+        </p>
+        {/* show more button */}
+        {hasShowButton && <button onClick={handleClickShowMore}>Show more</button>}
+      </div>
+    </>
   );
 };

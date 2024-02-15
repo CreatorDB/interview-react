@@ -19,10 +19,13 @@ export const Test1Page = () => {
   // need to implement getItems api
 
   return (
-    <div className="flex justify-center">
-      {/* loading */}
-      {/* error */}
-      {/* data */}
-    </div>
+    <>
+      <h1 className="text-lg font-bold">Show me how to call api and render related UI</h1>
+      <div className="flex justify-center">
+        {/* loading */}
+        {/* error */}
+        {/* data */}
+      </div>
+    </>
   );
 };
