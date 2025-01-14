@@ -31,6 +31,6 @@ export const getItems = ({ isReturnError }: { isReturnError: boolean } = { isRet
       } else {
         resolve(data);
       }
-    }, 1000);
+    }, 1500);
   });
 };
