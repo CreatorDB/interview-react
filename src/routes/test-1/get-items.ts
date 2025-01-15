@@ -23,7 +23,7 @@ const data: Item[] = [
   },
 ];
 
-export const getItems = async ({ isReturnError }: { isReturnError: boolean } = { isReturnError: false }) => {
+export const getItems = ({ isReturnError }: { isReturnError: boolean } = { isReturnError: false }) => {
   return new Promise<Item[]>((resolve, reject) => {
     window.setTimeout(() => {
       if (isReturnError) {
@@ -31,6 +31,6 @@ export const getItems = async ({ isReturnError }: { isReturnError: boolean } = {
       } else {
         resolve(data);
       }
-    }, 1000);
+    }, 1500);
   });
 };

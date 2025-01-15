@@ -1,16 +1,12 @@
 import React from 'react';
 
 export const Test3Page = () => {
-  // intro el ref
   const introEl = React.useRef<HTMLParagraphElement | null>(null);
 
-  // intro el height
   const [introElHeight, setIntroElHeight] = React.useState<number>(0);
 
-  // has show button state
   const [hasShowButton, setHasShowButton] = React.useState<boolean>(false);
 
-  // handle click show more
   const handleClickShowMore = () => {
     if (introEl.current) {
       introEl.current.classList.remove('line-clamp-3');
@@ -18,7 +14,7 @@ export const Test3Page = () => {
     }
   };
 
-  // get intro el height on mount
+  // Get intro element height when component mounted and check if show more button is needed
   React.useEffect(() => {
     if (introEl.current) {
       const { height } = introEl.current.getBoundingClientRect();
@@ -32,13 +28,23 @@ export const Test3Page = () => {
       <h1 className="text-lg font-bold">There is something weird</h1>
       <div>
         {/* intro */}
-        <p ref={introEl} className={[introElHeight > 72 ? 'line-clamp-3' : '', 'w-60'].join(' ')}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem magnam dolorem aliquid consectetur nemo
-          ipsam ex ab maxime blanditiis voluptatum officiis repudiandae praesentium atque doloremque, beatae excepturi
-          reprehenderit quisquam ratione! Officia voluptate ratione quidem ea dolores eos facere omnis molestias!
-        </p>
+        <div ref={introEl} className={[introElHeight > 72 ? 'line-clamp-3' : '', 'w-60'].join(' ')}>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem magnam dolorem aliquid consectetur nemo
+            ipsam ex ab maxime blanditiis voluptatum officiis repudiandae praesentium atque doloremque, beatae excepturi
+            reprehenderit quisquam ratione! Officia voluptate ratione quidem ea dolores eos facere omnis molestias!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dignissimos accusantium tempore? In
+            voluptatem eaque aspernatur illum! Vel soluta perspiciatis non temporibus, est, cupiditate repellat iusto
+            voluptatum placeat aperiam omnis?
+          </p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas totam possimus laboriosam nemo aliquid atque
+            molestias officiis velit, reprehenderit, esse natus magni dolorum soluta inventore, fugiat obcaecati quasi
+            libero maxime.
+          </p>
+        </div>
         {/* show more button */}
-        {hasShowButton && <button onClick={handleClickShowMore}>Show more</button>}
+        {hasShowButton && <button className='text-blue-500' onClick={handleClickShowMore}>Show more</button>}
       </div>
     </>
   );

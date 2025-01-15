@@ -1,5 +1,3 @@
-// import React from 'react';
-
 // import type { Item } from './types';
 // import { getItems } from './get-items';
 
@@ -7,24 +5,22 @@
 //   <div className="h-5 w-5 animate-spin rounded-full border-[2px] border-gray-200 border-r-orange-400" />
 // );
 
-// const Error = ({ error }: { error: Error }) => <div className="italic text-red-800">{error.message}</div>;
+// const Error = ({ message }: { message: string }) => <div className="italic text-red-800">{message}</div>;
 
-// const Item = ({ name, age }: Omit<Item, 'id'>) => (
+// const Item = ({ name, age }: { name: Item['name'], age: Item['age'] }) => (
 //   <li>
 //     {name} - {age} years old
 //   </li>
 // );
 
 export const Test1Page = () => {
-  // need to implement getItems api
+  // Please use `getItems` to implement this page
 
   return (
     <>
-      <h1 className="text-lg font-bold">Show me how to call api and render related UI</h1>
+      <h1 className="text-lg font-bold">Please call api and render related UI</h1>
       <div className="flex justify-center">
-        {/* loading */}
-        {/* error */}
-        {/* data */}
+        {/* Implement UI for items */}
       </div>
     </>
   );
