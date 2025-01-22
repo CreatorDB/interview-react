@@ -20,6 +20,7 @@ export const Layout = () => {
         <CustomLink to="/test-1">test-1</CustomLink>
         <CustomLink to="/test-2">test-2</CustomLink>
         <CustomLink to="/test-3">test-3</CustomLink>
+        <CustomLink to="/test-4">test-4</CustomLink>
       </div>
       <Outlet />
     </div>
