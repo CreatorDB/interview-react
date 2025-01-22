@@ -25,7 +25,7 @@ export const Test3Page = () => {
 
   return (
     <>
-      <h1 className="text-lg font-bold">There is something weird</h1>
+      <h1 className="text-lg font-bold">What happens when navigating to this page from other routes?</h1>
       <div>
         {/* intro */}
         <div ref={introEl} className={[introElHeight > 72 ? 'line-clamp-3' : '', 'w-60'].join(' ')}>
@@ -42,9 +42,18 @@ export const Test3Page = () => {
             molestias officiis velit, reprehenderit, esse natus magni dolorum soluta inventore, fugiat obcaecati quasi
             libero maxime.
           </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea natus praesentium expedita, tenetur aliquam
+            repellendus doloremque quaerat. Quia, nulla deserunt, iusto, quasi amet delectus sit aspernatur enim
+            voluptatem voluptatum dolorem.
+          </p>
         </div>
         {/* show more button */}
-        {hasShowButton && <button className='text-blue-500' onClick={handleClickShowMore}>Show more</button>}
+        {hasShowButton && (
+          <button className="text-blue-500" onClick={handleClickShowMore}>
+            Show more
+          </button>
+        )}
       </div>
     </>
   );
