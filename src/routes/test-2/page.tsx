@@ -3,11 +3,8 @@ import shuffle from 'lodash/shuffle';
 
 import { QuestionBox } from '../../components/question-box';
 
-const showQuestion2 = true;
-
 export const Test2Page = () => {
-  const renderCountRef = React.useRef<number>(0);
-  console.log(`Render count: ${++renderCountRef.current}`);
+  const [showQuestion2, setShowQuestion2] = React.useState<boolean>(false);
 
   const [name, setName] = React.useState<string>('');
 
@@ -20,13 +17,6 @@ export const Test2Page = () => {
     e.preventDefault();
     window.alert(`Hello, ${name}!`);
   };
-
-  // reset render count on unmount
-  React.useEffect(() => {
-    return () => {
-      renderCountRef.current = 0;
-    };
-  }, []);
 
   return (
     <>
@@ -43,18 +33,25 @@ export const Test2Page = () => {
             />
           </div>
           {/* submit button */}
-          <button type="submit" className="rounded-full border-blue-700 bg-blue-400 px-2 text-white">
+          <button type="submit" className="mt-12 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
             Submit
           </button>
         </form>
 
+        {/* QUESTION 2 */}
+        <button
+          className="mt-12 bg-slate-500 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded"
+          onClick={() => setShowQuestion2(state => !state)}
+        >
+          Toggle Question 2
+        </button>
         {showQuestion2 && (
           <div className='mt-8'>
             <QuestionBox
               index={2}
-              text="If there's lot's of element on this page, how would you improve the performance for user typing."
+              text="Typing in the input becomes laggy. Please explain why this happens and how to fix it."
             />
-            <HeavyElement count={12000} />
+            <HeavyElement count={10000} />
           </div>
         )}
       </div>
